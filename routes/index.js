@@ -27,10 +27,24 @@ router.get('/', async function(req, res, next) {
 router.get('/test', function(request, response, next){
     response.render('test.njk', {
         title: 'Tesst',
-        intro: '' //,
+        segment: '' //,
         //rows: rows
     });
 
+})
+
+router.get('/nav', function(req, res, next){
+    res.render('_nav.njk', {
+        title:'',
+        intro:''
+    })
+})
+
+router.get('/footer', function(req, res, next){
+    res.render('_footer.njk', {
+        title:'',
+        intro:''
+    })
 })
 
 module.exports = router;
